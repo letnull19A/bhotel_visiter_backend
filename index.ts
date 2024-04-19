@@ -1,7 +1,11 @@
+import { log, error } from 'console'
 import dotenv from 'dotenv'
+import { env } from 'process'
 
-const main = async () => {
-    dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
+const main = async (): Promise<void> => {
+    dotenv.config({ path: `.env.${env.NODE_ENV}` })
+
+    log(`Server started on ${env.NODE_ENV} mode`)
 }
 
-main().catch(console.error)
+main().catch(error)

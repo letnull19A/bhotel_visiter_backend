@@ -1,9 +1,9 @@
 {
   "version": "1.0.0.",
   "name": "backend",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "dev": "tsc && node ./dist/index.js",
+    "dev": "set NODE_ENV=development && tsc && node ./dist/index.js",
     "build": "tsc",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
